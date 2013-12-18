@@ -97,7 +97,7 @@
      // If toPush is an array, all of its elements should be pushed onto array. Your solution should modify array (ie. not return a new array).
      function pushOntoArray(array, toPush) {
          array.push(toPush);
-		 return array[0];
+		 //return array[0];
      }
 
      // Given a string, sourceStr, write some code that will split this string using comma as your delimiter, and producing an empty array if the string is empty.
@@ -107,7 +107,7 @@
 
      // Write a function that will take any number of arguments and return their sum
      function sum() {
-         // FILL THIS IN
+         // FILL THIS   IN
      }
 
      // Write a function that will return true if a specified string consists of only whitespace.
@@ -122,7 +122,17 @@
      }
 
      // write an example of a javascript closure
-
+	 
+	 // A function that generates a new function for adding numbers.
+	function addGenerator( num ) {
+		// Return a simple function for adding two numbers
+		// with the first number borrowed from the generator
+		return function( toAdd ) {
+			return num + toAdd
+		};
+	}
+	//Closure end
+	
      // define a json object that represents a collection of people.
      // each person should have the following properties
      // - first name
@@ -131,6 +141,44 @@
      // - state
      // - zip
      // - a collection of phone numbers (home, work, mobile)
+	 "people": [
+        {
+            "first name": "John",
+            "last name": "Doe",
+			"city": "Miami",
+			"state": "FL",
+			"zip": "33411",
+			"phone numbers" : [
+			  {
+				"home" :"5551212"
+			  },
+			  {
+				"work" :"5551212"
+			  },
+			  {
+				"mobile" :"5551212"
+			  }
+			]
+        },
+        {
+            "first name": "Jane",
+            "last name": "Wayne",
+			"city": "Los Angeles",
+			"state": "CA",
+			"zip": "56789",
+			"phone numbers" : [
+			  {
+				"home" :"5551212"
+			  },
+			  {
+				"work" :"5551212"
+			  },
+			  {
+				"mobile" :"5551212"
+			  }
+			]
+        }
+    ]
 
 
      // Create a javascript object (DataTable) with the following:
