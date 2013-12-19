@@ -1,0 +1,4 @@
+<script>
+time = Math.round(((new Date()).getTime()-Date.UTC(1970,0,1))/1000);
+
+</script>

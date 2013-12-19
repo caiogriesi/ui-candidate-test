@@ -1,0 +1,29 @@
+<script>
+function getTimeStamp() {
+    var now = new Date();
+    return ((now.getMonth() + 1) + '/' +
+            (now.getDate()) + '/' +
+             now.getFullYear() + " " +
+             now.getHours() + ':' +
+             ((now.getMinutes() < 10)
+                 ? ("0" + now.getMinutes())
+                 : (now.getMinutes())) + ':' +
+             ((now.getSeconds() < 10)
+                 ? ("0" + now.getSeconds())
+                 : (now.getSeconds())));
+}
+
+getTimeStamp();
+
+var txt = "Browser CodeName: " + navigator.appCodeName + "<br/>";
+txt+= "Browser Name: " + navigator.appName + "<br/>";
+txt+= "Browser Version: " + navigator.appVersion + "<br/>";
+txt+= "Cookies Enabled: " + navigator.cookieEnabled + "<br/>";
+txt+= "Browser Language: " + navigator.language + "<br/>";
+txt+= "Browser Online: " + navigator.onLine + "<br/>";
+txt+= "Platform: " + navigator.platform + "<br/>";
+txt+= "User-agent header: " + navigator.userAgent + "<br/>";
+txt+= "User-agent language: " + navigator.systemLanguage + "<br/>";
+
+document.write(getTimeStamp() + "<br/>" + txt)
+</script>

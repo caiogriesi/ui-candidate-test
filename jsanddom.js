@@ -107,7 +107,11 @@
 
      // Write a function that will take any number of arguments and return their sum
      function sum() {
-         // FILL THIS   IN
+        var total = 0;
+		for (var i = 0; i < arguments.length; ++i) {
+			total += arguments[i];
+		}
+		return total;
      }
 
      // Write a function that will return true if a specified string consists of only whitespace.
@@ -141,44 +145,47 @@
      // - state
      // - zip
      // - a collection of phone numbers (home, work, mobile)
-	 "people": [
-        {
-            "first name": "John",
-            "last name": "Doe",
-			"city": "Miami",
-			"state": "FL",
-			"zip": "33411",
-			"phone numbers" : [
-			  {
-				"home" :"5551212"
-			  },
-			  {
-				"work" :"5551212"
-			  },
-			  {
-				"mobile" :"5551212"
-			  }
-			]
-        },
-        {
-            "first name": "Jane",
-            "last name": "Wayne",
-			"city": "Los Angeles",
-			"state": "CA",
-			"zip": "56789",
-			"phone numbers" : [
-			  {
-				"home" :"5551212"
-			  },
-			  {
-				"work" :"5551212"
-			  },
-			  {
-				"mobile" :"5551212"
-			  }
-			]
-        }
-    ]
+	 var jsonObject = 
+	 {
+		 "people": [
+			{
+				"first name": "John",
+				"last name": "Doe",
+				"city": "Miami",
+				"state": "FL",
+				"zip": "33411",
+				"phone numbers" : [
+				  {
+					"home" :"5551212"
+				  },
+				  {
+					"work" :"5551212"
+				  },
+				  {
+					"mobile" :"5551212"
+				  }
+				]
+			},
+			{
+				"first name": "Jane",
+				"last name": "Wayne",
+				"city": "Los Angeles",
+				"state": "CA",
+				"zip": "56789",
+				"phone numbers" : [
+				  {
+					"home" :"5551212"
+				  },
+				  {
+					"work" :"5551212"
+				  },
+				  {
+					"mobile" :"5551212"
+				  }
+				]
+			}
+		]
+	};
 
 
      // Create a javascript object (DataTable) with the following:
@@ -192,6 +199,10 @@
      // .addColumns('column1', 'column2', 'column3');
      // .addRow('value1A', 'value1B', 'value1C');
      // .addRow('value2A', 'value2B', 'value2C');
+	 
+	 var data = new etcaio.DataTable();
+	 
+	 
 
      // within div1, programatically create a
      // SELECT element (with multiple items) and a button.
